@@ -17,7 +17,7 @@ if( ! function_exists( 'blogger_register_custom_controls' ) ){
      * @see https://developer.wordpress.org/reference/hooks/customize_register/
      */
     function blogger_register_custom_controls( $wp_customize ) {
-        require_once get_template_directory() . '/inc/Blogger_Controls.php';
+        require_once get_template_directory() . '/inc/customizer/controls/Blogger_Controls.php';
         $wp_customize->register_control_type( 'Blogger_Toggle_Control' );
 
     }
