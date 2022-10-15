@@ -29,10 +29,9 @@
      * @return Array $menu
      * @since 1.0.1
      * @see https://developer.wordpress.org/reference/functions/wp_get_nav_menu_items/
-     * 
      */
 
-     function blogger_get_menu_by_location($menu_location){
+     function blogger_get_menu_by_location($menu_location,$allow_children = true){
         /**
          * Fetch menu ID
          */
@@ -45,6 +44,10 @@
         }
 
         $menu_items = wp_get_nav_menu_items( $menu_id );
+
+        if($allow_children == false){
+            $menu_items;
+        }
 
         foreach($menu_items as $item){
 
