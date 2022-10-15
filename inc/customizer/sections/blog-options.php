@@ -35,6 +35,7 @@ if(!function_exists('bloggar_blog_options')){
         $wp_customize->add_setting('archive_primary_color', array('default' => '#fff'));
         $wp_customize->add_setting('archive_text_color', array('default' => '#000'));
         $wp_customize->add_setting('article_layout', array('default' => 'standard'));
+        $wp_customize->add_setting('article_font', array('default' => 'Poppins'));
 
         $wp_customize->add_control( 'archive_display_type', array(
             'id'=> 'archive_display_type_id',
@@ -117,6 +118,23 @@ if(!function_exists('bloggar_blog_options')){
             'choices'  => array(
                 'layout_one' => 'Layout one',
                 'layout_two' => 'Layout two'
+            )
+        ));
+
+          /**fonts */
+          $wp_customize->add_control( 'article_font', array(
+            'settings' => 'article_font',
+            'label'    => esc_html__( 'Choose Font', 'bloggar' ),
+            'section'  => 'blog_settings',
+            'type'     => 'select',
+            'choices'  => array(
+                'Roboto'     => 'Roboto',
+                'Raleway'    => 'Raleway',
+                'Poppins'    => 'Poppins',
+                'Noto Serif' => 'Noto Serif',
+                'Arial'      => 'Arial',
+                'Lato'       => 'Lato',
+                'Inika'      => 'Inika',
             )
         ));
     }
