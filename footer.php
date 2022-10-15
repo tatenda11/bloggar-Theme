@@ -27,7 +27,7 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<?php require_once( get_template_directory(). '/assets/js/bootstrap.bundle.min.js.php' );?>
 <?php wp_footer(); ?>
 
 </body>

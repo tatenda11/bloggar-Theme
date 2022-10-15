@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	 <?php require_once( get_template_directory(). '/assets/css/bootstrap.min.css.php' );?>
 	<?php wp_head(); ?>
 </head>
 
@@ -25,6 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bloggar' ); ?></a>
 	<h1>Top title</h1>
+	<a href="#" class='btn btn-primary btn-lg'>Button</a>
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
