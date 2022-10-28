@@ -36,6 +36,7 @@ if(!function_exists('bloggar_blog_options')){
         $wp_customize->add_setting('archive_text_color', array('default' => '#000'));
         $wp_customize->add_setting('article_layout', array('default' => 'standard'));
         $wp_customize->add_setting('article_font', array('default' => 'Poppins'));
+        $wp_customize->add_setting('article_font_size', array('default' => 16));
 
         $wp_customize->add_control( 'archive_display_type', array(
             'id'=> 'archive_display_type_id',
@@ -137,6 +138,14 @@ if(!function_exists('bloggar_blog_options')){
                 'Inika'      => 'Inika',
             )
         ));
+
+        $wp_customize->add_control( 'article_font_size', array(
+            'settings' => 'article_font_size',
+            'type' => 'number',
+            'section' => 'blog_settings', // Required, core or custom.
+            'label' => esc_html__( 'Default font size', 'bloggar' ),
+        ));
+
     }
 
     add_action( 'customize_register', 'bloggar_blog_options' );
