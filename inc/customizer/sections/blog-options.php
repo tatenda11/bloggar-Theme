@@ -146,6 +146,13 @@ if(!function_exists('bloggar_blog_options')){
             'label' => esc_html__( 'Default font size', 'bloggar' ),
         ));
 
+        $wp_customize->add_control( 'article_line_height', array(
+            'settings' => 'article_line_height',
+            'type' => 'text',
+            'section' => 'blog_settings', // Required, core or custom.
+            'label' => esc_html__( 'Default line height', 'bloggar' ),
+        ));
+
     }
 
     add_action( 'customize_register', 'bloggar_blog_options' );
